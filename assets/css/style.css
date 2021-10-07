@@ -1,0 +1,188 @@
+header{
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 56px;
+    background-color: var(--bg-color);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+header h1 a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-1);
+}
+
+header .navbar{
+    display: flex;
+    list-style: none;
+}
+
+.navlink a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    margin: 0px 20px;
+    transition: all var(--transition) ease;
+}
+
+.hero{
+    margin: 10px 0px;
+    padding: 50px 10px;
+}
+
+.hero-image{
+    width: 37.5rem;
+}
+
+.hero-bio{
+    width: 50%;
+    text-align: center;
+    font-family: var(--font-2);
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.skills{
+    flex-direction: column;
+}
+
+
+.heading-hr{
+    width: 80px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    margin: 20px;
+}
+
+/* Skills Section Start */
+.my-skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    /* Icon Card */
+.icon-card{
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0px 3px 10px #000;
+    margin: 10px;
+    cursor: pointer;
+    transition: all var(--transition) ease;
+}
+
+.icon-card:hover{
+    padding: 0.8rem;
+}
+
+    /* Icon Image */
+.icon{
+    width: 11.875rem;
+    height: 11.25rem;
+}
+/* Skills Section End */
+
+/* Project Section Start */
+.projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project-hr{
+    width: 120px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    margin: 20px;
+}
+
+    /* Project Card */
+.project-card{
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px 5px;
+    margin: 10px;
+    text-align: center;
+    width: 21rem;
+    height: inherit;
+    transition: all var(--transition) ease;
+    cursor: pointer;
+}
+
+.project-card:hover{
+    width: 22rem;
+
+}
+    
+    /* Project Image */
+.project-card img{
+    width: 65%;
+    height: 60%;
+}
+    /* Project Description */
+.project-desc{
+    padding: 0.4rem;
+}
+/* Project Section End */
+
+/* Contact Section Start */
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-group input, .form-group textarea{
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin: 10px auto;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    width: 40rem;
+    font-family: var(--font-2);
+    transition: all var(--transition) ease;
+}
+
+
+.form-group input::placeholder, .form-group textarea::placeholder{
+    color: var(--primary-color);
+    transition: all var(--transition) ease;
+}
+
+.form-group input:focus::placeholder, .form-group textarea:focus::placeholder{
+    position: relative;
+    font-size: .8rem;
+    z-index: 10000;
+}
+/* Contact Section End */
+
+/* Scroll To Top  */
+.scroll{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+/* Footer  */
+footer{
+    text-align: center;
+    padding: 10px ;
+}

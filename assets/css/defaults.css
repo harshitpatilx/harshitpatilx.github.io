@@ -1,0 +1,104 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Variables */
+:root{
+    --font-1: 'Roboto', sans-serif;
+    --font-2: 'Poppins', sans-serif;
+    --bg-color: #fcfcfc;
+    --primary-color: #4756df;
+    --secondary-color: #122072;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #000000;
+    --transition: 0.3s;
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Scroll Bar Start */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Scroll Track */
+::-webkit-scrollbar-track {
+    background: none; 
+    width: 10px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 8px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; ;
+    background-clip: content-box;
+}
+/* Scroll Bar End */
+
+/* CSS Classes */
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.ctalink{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all var(--transition) ease;
+}
+
+a{
+    color: var(--primary-color);
+    transition: all var(--transition) ease;
+    cursor: pointer;
+}
+
+a:hover{
+    color: var(--secondary-color);
+}
+
+.heading{
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.btn{
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 5px 0px;
+    font-family: var(--font-2);
+    background-color: var(--primary-color);
+    outline: none;
+    color: var(--bg-color);
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    font-weight: 700;
+}
+
+.btn:focus{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
