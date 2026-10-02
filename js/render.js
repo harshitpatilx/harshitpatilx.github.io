@@ -96,9 +96,18 @@ export function renderSkeletons(grid, n = 6) {
       h("div", { class: "bar" }), h("div", { class: "bar" }), h("div", { class: "bar" })))));
 }
 
-export function renderError(grid, onRetry, profileUrl) {
+export function renderError(grid, onRetry, profileUrl, error) {
+  const isRateLimited = error?.isRateLimit;
+  const resetText = error?.resetAt
+    ? ` It should reset around ${new Date(error.resetAt).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}.`
+    : "";
+
   grid.replaceChildren(h("li", { class: "empty" },
-    h("p", { text: "Couldn't load repositories from GitHub. This usually clears up in a few minutes." }),
+    h("p", {
+      text: isRateLimited
+        ? `GitHub API rate limit reached.${resetText}`
+        : "Couldn't load repositories from GitHub. This usually clears up in a few minutes."
+    }),
     h("div", { style: "display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center" },
       h("button", { class: "btn btn--primary", type: "button", onclick: onRetry, text: "Try again" }),
       h("a", { class: "btn btn--ghost", href: profileUrl, target: "_blank", rel: "noopener", text: "View on GitHub" }),
@@ -130,11 +139,17 @@ export function renderLanguageBar(stats) {
   track.setAttribute("aria-label", "Language breakdown: " + stats.map((s) => `${s.name} ${Math.round(s.pct)}%`).join(", "));
 }
 
-export function renderStatus(el, source, t) {
+export function renderStatus(el, source, t, resetAt = null) {
+  const resetText = resetAt
+    ? ` It should reset around ${new Date(resetAt).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}.`
+    : "";
+
   const messages = {
     live: "Synced with GitHub just now.",
     cache: `Synced with GitHub ${timeAgo(t)}.`,
     stale: `GitHub didn't respond, so this is the copy saved ${timeAgo(t)}.`,
+    "rate-limit": `GitHub API rate limit reached. Showing the last saved copy.${resetText}`,
   };
   el.textContent = messages[source] || "";
+  el.setAttribute("data-status", source || "");
 }

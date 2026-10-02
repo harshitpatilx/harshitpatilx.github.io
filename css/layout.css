@@ -134,6 +134,7 @@
 .filter[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
 .status { margin-top: 1rem; min-height: 1.5rem; color: var(--muted); font-size: var(--step--1); }
+.status[data-status="rate-limit"] { color: var(--accent); }
 
 .grid {
   margin-top: 1rem;

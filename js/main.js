@@ -57,12 +57,18 @@ async function load({ force = false } = {}) {
       followers: profileRes ? profileRes.data.followers : null,
     });
     renderLanguageBar(langs);
-    renderStatus($("repo-status"), repoRes.source, repoRes.t);
+
+    if (repoRes.rateLimited) {
+      renderStatus($("repo-status"), "rate-limit", repoRes.t, repoRes.resetAt);
+    } else {
+      renderStatus($("repo-status"), repoRes.source, repoRes.t);
+    }
+
     refresh();
   } catch (err) {
     console.error(err);
     $("repo-status").textContent = "";
-    renderError(grid, () => load({ force: true }), profileUrl);
+    renderError(grid, () => load({ force: true }), profileUrl, err);
   } finally {
     loading = false;
   }
