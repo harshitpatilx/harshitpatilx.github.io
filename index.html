@@ -1,42 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Coming Soon</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="masthead">
-            <div class="masthead-content text-white">
-                <div class="container-fluid px-4 px-lg-0">
-                    <h1 class="fst-italic lh-1 mb-4">Our Website is Coming Soon</h1>
-                    <p class="mb-5">We're working hard to finish the development of this site.</p>
-                </div>
-            </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harshit Patil | Developer</title>
+  <meta name="description"
+    content="Portfolio of Harshit Patil, a web developer from India. Projects update automatically from GitHub.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314161a'/%3E%3Ctext x='16' y='22.5' font-size='18' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'%3EH%3C/text%3E%3C/svg%3E">
+
+  <script src="js/theme-init.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="container nav__bar">
+      <a class="nav__brand" href="" aria-label="Harshit Patil, home">Harshit Patil</a>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8" />
+            <path
+              d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7"
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <button class="icon-btn nav__burger" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="nav-menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <canvas class="hero__canvas" id="scene" aria-hidden="true"></canvas>
+      <div class="container hero__inner">
+        <h1 data-intro style="--i:0">Harshit Patil</h1>
+        <p class="hero__role" data-intro style="--i:1"><span id="typed">Web developer</span><span class="caret"
+            aria-hidden="true"></span></p>
+        <p class="hero__bio" data-intro style="--i:2">I enjoy working across the stack, from Django and Express backends with MongoDB and MySQL to React front ends, while also exploring the intersection of code, systems, and design through Figma and Photoshop.</p>
+        <div class="hero__actions" data-intro style="--i:3">
+          <a class="btn btn--primary" href="#projects">See projects</a>
+          <a class="btn btn--ghost" href="https://github.com/harshitpatilx" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn--ghost" href="https://linkedin.com/in/patil-harshit" target="_blank"
+            rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about">
+        <img class="about__avatar" data-reveal src="https://avatars.githubusercontent.com/u/85615003?v=4&s=320"
+          alt="Harshit Patil" loading="lazy">
+        <div class="about__text" data-reveal>
+          <h2>About</h2>
+          <p>Based in India, I'm pursuing a B.Tech-M.Tech in Computer Science & Engineering (Cybersecurity) at National Forensic Sciences University, Gandhinagar.</p>
+          <p>Most of what you'll find below started as a curiosity that turned into a project: a tool, an experiment, a
+            weird idea, or something I simply wanted to understand by building it myself. I like going down technical
+            rabbit holes, taking things apart, and building them back better.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <dl class="stats" data-reveal>
+          <div class="stat">
+            <dt>Public repositories</dt>
+            <dd id="stat-repos">-</dd>
+          </div>
+          <div class="stat">
+            <dt>Stars earned</dt>
+            <dd id="stat-stars">-</dd>
+          </div>
+          <div class="stat">
+            <dt>Languages used</dt>
+            <dd id="stat-langs">-</dd>
+          </div>
+          <div class="stat">
+            <dt>Followers</dt>
+            <dd id="stat-followers">-</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 data-reveal>Skills</h2>
+        <div class="skills">
+          <div class="skill-group" data-reveal>
+            <h3>Languages</h3>
+            <ul class="chips">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>C</li>
+              <li>C++</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Frameworks</h3>
+            <ul class="chips">
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>Django</li>
+              <li>Bootstrap</li>
+              <li>EJS</li>
+              <li>WordPress</li>
+            </ul>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Data and servers</h3>
+            <ul class="chips">
+              <li>MongoDB</li>
+              <li>MySQL</li>
+              <li>Apache</li>
+              <li>Nginx</li>
+            </ul>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Design and tools</h3>
+            <ul class="chips">
+              <li>Figma</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>Lightroom</li>
+              <li>Canva</li>
+              <li>GIMP</li>
+              <li>Postman</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="social-icons">
-            <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
-                <a class="btn btn-dark m-3" href="https://www.github.com/harshitpatilx"><i class="fab fa-github"></i></a>
-                <a class="btn btn-dark m-3" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-dark m-3" href="#"><i class="fab fa-instagram"></i></a>
-            </div>
+        <div class="langbar" data-reveal>
+          <h3>Languages in my repositories</h3>
+          <div class="langbar__track" id="lang-bar" role="img" aria-label="Language breakdown loading"></div>
+          <ul class="langbar__legend" id="lang-legend"></ul>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 data-reveal>Projects</h2>
+        <p class="section__intro" data-reveal>Pulled live from my GitHub account. When I publish a new repository, it
+          shows up here on its own.</p>
+
+        <div class="toolbar" data-reveal>
+          <label class="field field--search">
+            <span class="visually-hidden">Search repositories</span>
+            <input id="repo-search" type="search" placeholder="Search projects" autocomplete="off">
+          </label>
+          <label class="field">
+            <span class="visually-hidden">Sort repositories</span>
+            <select id="repo-sort">
+              <option value="updated">Recently updated</option>
+              <option value="created">Newest</option>
+              <option value="stars">Most starred</option>
+              <option value="name">Name A to Z</option>
+            </select>
+          </label>
+          <label class="check">
+            <input id="repo-extended" type="checkbox">
+            <span>Include forks and archived</span>
+          </label>
+        </div>
+
+        <div class="filters" id="lang-filters" role="group" aria-label="Filter by language"></div>
+        <p class="status" id="repo-status" role="status" aria-live="polite"></p>
+
+        <ul class="grid" id="repo-grid"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__bar">
+      <p>&copy; <span id="year">2026</span> Harshit Patil</p>
+      <ul class="footer__links">
+        <li><a href="https://github.com/harshitpatilx" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/patil-harshit" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
 </html>

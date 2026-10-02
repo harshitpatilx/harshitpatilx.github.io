@@ -1,0 +1,39 @@
+:root,
+:root[data-theme="light"] {
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --ink: #14161a;
+  --muted: #5b6270;
+  --line: #e1e4ea;
+  --line-strong: #c4c9d2;
+  --accent: #3b4cff;
+  --on-accent: #ffffff;
+  --accent-soft: rgba(59, 76, 255, 0.1);
+  --nav-bg: rgba(244, 245, 247, 0.78);
+  --shadow: 0 1px 2px rgba(20, 22, 26, 0.04), 0 8px 24px rgba(20, 22, 26, 0.06);
+  --scene-line: #9aa1b2;
+  --scene-accent: #3b4cff;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0e1013;
+  --surface: #151820;
+  --ink: #eceef2;
+  --muted: #959dad;
+  --line: #242833;
+  --line-strong: #3a4050;
+  --accent: #8b98ff;
+  --on-accent: #0e1013;
+  --accent-soft: rgba(139, 152, 255, 0.14);
+  --nav-bg: rgba(14, 16, 19, 0.78);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --scene-line: #4a5266;
+  --scene-accent: #8b98ff;
+  color-scheme: dark;
+}
+
+/* Theme toggle icon: show the icon for the theme you would switch to */
+.icon-sun { display: none; }
+:root[data-theme="dark"] .icon-sun { display: block; }
+:root[data-theme="dark"] .icon-moon { display: none; }
